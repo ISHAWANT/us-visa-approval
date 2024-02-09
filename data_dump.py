@@ -2,7 +2,7 @@ import pymongo # pip install pymongo
 import pandas as pd
 import json
 
-client = pymongo.MongoClient("mongodb+srv://pawan:pawan123@cluster0.qafja9l.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://rakesh:rakesh3210@cluster0.ytkfwzz.mongodb.net/?retryWrites=true&w=majority")
 
 DATA_FILE_PATH = (r"notebooks/Visadataset.csv")
 DATABASE_NAME = "US_VISA"

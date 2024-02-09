@@ -8,7 +8,8 @@ from us_visa.entity.config_entity import DataIngestionConfig
 from us_visa.entity.artifact_entity import DataIngestionArtifact
 from us_visa.exceptions import USvisaException
 from us_visa.logger import logging
-from us_visa.data_access.usvisa_data import USvisaData
+# from us_visa.data_access.usvisa_data import USvisaData
+from us_visa.data_access.usvis_data import USvisaData
 
 class DataIngestion:
     def __init__(self,data_ingestion_config:DataIngestionConfig=DataIngestionConfig()):
