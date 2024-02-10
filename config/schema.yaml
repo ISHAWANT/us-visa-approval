@@ -12,7 +12,7 @@ columns:
   - full_time_position: category
   - case_status: category
 
-  numerical_columns:
+numerical_columns:
   - no_of_employees
   - prevailing_wage
   - yr_of_estab
