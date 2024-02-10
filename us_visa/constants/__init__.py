@@ -12,6 +12,9 @@ CURRENT_YEAR = date.today().year
 PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 
 
+MODEL_FILE_NAME = "model.pkl"
+
+
 PIPELINE_NAME: str = "usvisa"
 ARTIFACT_DIR: str = "artifact"
 
