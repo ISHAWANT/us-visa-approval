@@ -7,6 +7,8 @@ COLLECTION_NAME = "visa_data"
 
 MONGODB_URL_KEY = "MONGODB_URL"
 
+PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
+
 
 PIPELINE_NAME: str = "usvisa"
 ARTIFACT_DIR: str = "artifact"
