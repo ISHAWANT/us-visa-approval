@@ -7,6 +7,8 @@ COLLECTION_NAME = "visa_data"
 
 MONGODB_URL_KEY = "MONGODB_URL"
 
+TARGET_COLUMN = "case_status"
+CURRENT_YEAR = date.today().year
 PREPROCSSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 
 
