@@ -85,9 +85,8 @@ traitlets==5.14.1
 typing_extensions==4.9.0
 tzdata==2023.4
 urllib3==1.26.18
+-e git+https://github.com/ISHAWANT/us-visa-approval.git@27c677a2a4963586c9876322d9d9a8d82a8a6eb2#egg=us_visa
 uvicorn==0.27.1
 wcwidth==0.2.13
 xgboost==2.0.3
 zipp==3.17.0
-
--e .

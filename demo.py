@@ -62,6 +62,41 @@
 # mp_art = mp_ins.initiate_model_pusher()
 
 # comment all above code and run only below code for training pipeline working or not 
-from us_visa.pipeline.training_pipeline import TrainPipeline
-tr_pp = TrainPipeline()
-tr_pp.run_pipeline()
+# from us_visa.pipeline.training_pipeline import TrainPipeline
+# tr_pp = TrainPipeline()
+# tr_pp.run_pipeline()
+
+from us_visa.pipeline.prediction_pipeline import USvisaData, USvisaClassifier
+
+usvisa_data = USvisaData(
+                        continent= 'Asia',
+                        education_of_employee = 'Doctorate',
+                        has_job_experience = 'Y',
+                        requires_job_training = 'N',
+                        no_of_employees= 20000,
+                        company_age= 100,
+                        region_of_employment = 'Northeast',
+                        prevailing_wage= 10000,
+                        unit_of_wage= 'Year',
+                        full_time_position= 'Y',
+                        )
+
+# usvisa_data = USvisaData(
+#                         continent= 'Asia',
+#                         education_of_employee = 'Doctorate',
+#                         has_job_experience = 'N',
+#                         requires_job_training = 'Y',
+#                         no_of_employees= 15000,
+#                         company_age= 10,
+#                         region_of_employment = 'West',
+#                         prevailing_wage= 1000,
+#                         unit_of_wage= 'Hour',
+#                         full_time_position= 'N',
+#                         )
+usvisa_df = usvisa_data.get_usvisa_input_data_frame()
+
+model_predictor = USvisaClassifier()
+
+value = model_predictor.predict(dataframe=usvisa_df)[0]
+
+print(value)
