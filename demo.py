@@ -9,18 +9,21 @@
 # Data ingestion 
 from us_visa.entity.config_entity import DataIngestionConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig
 from us_visa.entity.config_entity import DataValidationConfig
+from us_visa.entity.config_entity import ModelPusherConfig
 
 from us_visa.components.data_ingestion import DataIngestionArtifact
 from us_visa.components.data_validation import DataValidationArtifact
 from us_visa.components.data_transformation import DataTransformationArtifact
 from us_visa.components.model_trainer import ModelTrainerArtifact
 from us_visa.components.model_evaluation import ModelEvaluationArtifact
+from us_visa.components.model_pusher import ModelPusherArtifact
 
 from us_visa.components.data_ingestion import DataIngestion
 from us_visa.components.data_validation import DataValidation
 from us_visa.components.data_transformation import DataTransformation
 from us_visa.components.model_trainer import ModelTrainer
 from us_visa.components.model_evaluation import ModelEvaluation
+from us_visa.components.model_pusher import ModelPusher
 
 
 di_ins = DataIngestion(DataIngestionConfig)
@@ -52,3 +55,8 @@ mt_art = mt_ins.initiate_model_trainer()
 me_ins = ModelEvaluation(model_eval_config=ModelEvaluationConfig, data_ingestion_artifact=di_art, model_trainer_artifact=mt_art)
 
 me_art = me_ins.initiate_model_evaluation()
+
+# Model Pusher
+mp_ins = ModelPusher(me_art, ModelPusherConfig)
+
+mp_art = mp_ins.initiate_model_pusher()
